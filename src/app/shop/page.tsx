@@ -38,7 +38,7 @@ export default function Shop() {
     });
   }, [filters]);
 
-  const handleFilterChange = (newFilters: any) => {
+  const handleFilterChange = (newFilters: unknown) => {
     setFilters(newFilters);
   };
 

@@ -10,7 +10,7 @@ import { useCart } from "../contexts/CartContext";
 
 export default function Header() {
   const { data: session } = useSession();
-  const [user, setUser] = useState<any>(null);
+  const [user, setUser] = useState<unknown>(null);
   const { cart } = useCart();
   const totalItems = cart.reduce((sum, item) => sum + (item.quantity ?? 1), 0);
 

@@ -4,7 +4,7 @@ import { useState, useRef } from "react";
 import { categories, brands } from "@/data/product";
 
 interface FilterSidebarProps {
-  onFilterChange?: (filters: any) => void;
+  onFilterChange?: (filters: unknown) => void;
 }
 
 export default function FilterSidebar({ onFilterChange }: FilterSidebarProps) {

@@ -12,8 +12,8 @@ interface CartContextType {
   cart: CartProduct[];
   addToCart: (product: ProductType) => void;
   setCart: React.Dispatch<React.SetStateAction<CartProduct[]>>;
-  updateQuantity: any;
-  clearCart: any;
+  updateQuantity: unknown;
+  clearCart: unknown;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
