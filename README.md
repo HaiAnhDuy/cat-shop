@@ -4,33 +4,52 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 First, run the development server:
 
+````bash
+
+# Cat Shop - Next.js
+
+## Hướng dẫn cài đặt và chạy dự án
+
+1. **Clone repository**
+
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone về máy
+git clone https://github.com/HaiAnhDuy/cat-shop.git
+cd cat-shop
+````
+
+2. **Cài đặt dependencies**
+
+```bash
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. **Cấu hình môi trường (nếu cần)**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Tạo file `.env` (nếu dự án có yêu cầu, tham khảo mẫu `.env.example`).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. **Chạy dự án ở chế độ phát triển**
 
-## Learn More
+```bash
+npm run dev
+```
 
-To learn more about Next.js, take a look at the following resources:
+5. **Truy cập website**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Mở trình duyệt và truy cập: [http://localhost:3000](http://localhost:3000)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+- sử dụng database (Prisma):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  - Chạy lệnh migrate:
+    npx prisma migrate dev --name init
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Yêu cầu
+
+- Node.js >= 18
+- npm >= 9
+
+---
+
+Chúc bạn cài đặt thành công!
