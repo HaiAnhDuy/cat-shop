@@ -6,11 +6,11 @@ import Loading from "../components/Loading";
 import toast from "react-hot-toast";
 
 export default function CartPage() {
-  const { cart, updateQuantity, clearCart } = useCart() as unknown;
-  const cartItems: unknown = cart;
-  const [status, setStatus] = useState<unknown>(false);
+  const { cart, updateQuantity, clearCart } = useCart() as any;
+  const cartItems: any = cart;
+  const [status, setStatus] = useState<any>(false);
   const total = cartItems.reduce(
-    (sum, item) => sum + (item.price ?? 0) * (item.quantity ?? 1),
+    (sum: any, item: any) => sum + (item.price ?? 0) * (item.quantity ?? 1),
     0
   );
 
@@ -32,7 +32,7 @@ export default function CartPage() {
       setStatus(false);
       clearCart();
       toast.success("Thanh toán thành công!");
-    }, 2000);
+    }, 3000);
   };
   if (status) {
     return <Loading />;
@@ -49,7 +49,7 @@ export default function CartPage() {
       ) : (
         <div>
           <div className="divide-y divide-gray-100">
-            {cartItems.map((item: unknown) => (
+            {cartItems.map((item: any) => (
               <div key={item.id} className="flex items-center gap-6 py-6">
                 {item.image ? (
                   <Image
