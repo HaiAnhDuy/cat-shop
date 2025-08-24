@@ -63,7 +63,7 @@ export function CartProvider({ children }: CartProviderProps): JSX.Element {
     const currentItem = cart.find((i) => i.id === id);
     if (
       currentItem &&
-      //@ts-ignore
+      //@ts-expect-error
       currentItem.quantity + delta > (currentItem.inventory ?? Infinity)
     ) {
       toast.error(

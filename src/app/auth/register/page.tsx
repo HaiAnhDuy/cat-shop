@@ -14,7 +14,7 @@ export default function Register() {
   const router = useRouter();
   const { data: session, status } = useSession();
 
-  const HandleClick = async (e: any) => {
+  const HandleClick = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log({ username, password, confirmPassword, email });
     if (password !== confirmPassword) {

@@ -20,7 +20,7 @@ export default function Login() {
   if (status === "loading") {
     return <Loading />;
   }
-  const HandleClick = async (e: any) => {
+  const HandleClick = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     console.log("Starting login with:", { email, password });
 
